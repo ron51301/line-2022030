@@ -170,7 +170,7 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = "Miles"
+    name = "Ron"
     message = dict()
     message["type"] = "text"
     message["text"] = "".join("$" for r in range(len(name)))
@@ -217,6 +217,9 @@ def getTaipei101LocationMessage():
 
 def getMRTVideoMessage():
     message = dict()
+    message["type"] = "video"
+    message["originalContentUrl"] = F"{end_point}/static/taipei_101_video.mp4"
+    message["previewImageUrl"] = F"{end_point}/static/taipei_101.jpeg"
     return message
 
 
